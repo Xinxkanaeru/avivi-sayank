@@ -1,123 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart Animation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <style>
-        @keyframes bloom {
-            0% { transform: scale(0); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px #ff00ff; }
-            50% { box-shadow: 0 0 20px #ff00ff; }
-            100% { box-shadow: 0 0 5px #ff00ff; }
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .heart {
-            position: relative;
-            width: 100px;
-            height: 90px;
-            background-color: #ff00ff;
-            margin: 0 auto;
-            transform: rotate(-45deg);
-            animation: bloom 2s ease-in-out forwards, glow 2s infinite alternate;
-        }
-
-        .heart::before,
-        .heart::after {
-            content: "";
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #ff00ff;
-            border-radius: 50%;
-        }
-
-        .heart::before {
-            top: -50px;
-            left: 0;
-        }
-
-        .heart::after {
-            left: 50px;
-            top: 0;
-        }
-
-        .letter {
-            opacity: 0;
-            animation: fadeIn 0.5s forwards, glow 1s infinite alternate;
-        }
-
-        .letter:nth-child(1) { animation-delay: 2.5s; }
-        .letter:nth-child(2) { animation-delay: 3s; }
-        .letter:nth-child(3) { animation-delay: 3.5s; }
-        .letter:nth-child(4) { animation-delay: 4s; }
-        .letter:nth-child(5) { animation-delay: 4.5s; }
-        .letter:nth-child(6) { animation-delay: 5s; }
-        .letter:nth-child(7) { animation-delay: 5.5s; }
-        .letter:nth-child(8) { animation-delay: 6s; }
-        .letter:nth-child(9) { animation-delay: 6.5s; }
-        .letter:nth-child(10) { animation-delay: 7s; }
-        .letter:nth-child(11) { animation-delay: 7.5s; }
-        .letter:nth-child(12) { animation-delay: 8s; }
-        .letter:nth-child(13) { animation-delay: 8.5s; }
-        .letter:nth-child(14) { animation-delay: 9s; }
-        .letter:nth-child(15) { animation-delay: 9.5s; }
-        .letter:nth-child(16) { animation-delay: 10s; }
-        .letter:nth-child(17) { animation-delay: 10.5s; }
-        .letter:nth-child(18) { animation-delay: 11s; }
-        .letter:nth-child(19) { animation-delay: 11.5s; }
-        .letter:nth-child(20) { animation-delay: 12s; }
-        .letter:nth-child(21) { animation-delay: 12.5s; }
-        .letter:nth-child(22) { animation-delay: 13s; }
-        .letter:nth-child(23) { animation-delay: 13.5s; }
-        .letter:nth-child(24) { animation-delay: 14s; }
-    </style>
-</head>
-<body class="flex items-center justify-center min-h-screen bg-gray-900">
-    <div class="text-center">
-        <div class="heart"></div>
-        <div class="text-white text-4xl mt-4 hidden" id="message">
-            <span class="letter">I</span>
-            <span class="letter"> </span>
-            <span class="letter">L</span>
-            <span class="letter">o</span>
-            <span class="letter">v</span>
-            <span class="letter">e</span>
-            <span class="letter"> </span>
-            <span class="letter">Y</span>
-            <span class="letter">o</span>
-            <span class="letter">u</span>
-            <span class="letter"> </span>
-            <span class="letter">A</span>
-            <span class="letter">v</span>
-            <span class="letter">i</span>
-            <span class="letter">v</span>
-            <span class="letter">i</span>
-            <span class="letter"> </span>
-            <span class="letter">S</span>
-            <span class="letter">a</span>
-            <span class="letter">y</span>
-            <span class="letter">a</span>
-            <span class="letter">n</span>
-            <span class="letter">k</span>
-            <span class="letter">k</span>
-        </div>
-    </div>
-    <script>
-        setTimeout(() => {
-            document.querySelector('.heart').classList.add('hidden');
-            document.getElementById('message').classList.remove('hidden');
-        }, 2000);
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
